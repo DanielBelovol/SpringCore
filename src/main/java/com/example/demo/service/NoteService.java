@@ -22,6 +22,12 @@ public class NoteService {
 
         return newNote;
     }
+    public void update(Note note){
+        Note noteFromMap = mapOfAllNotes.get(note.getId());
+
+        noteFromMap.setTitle(note.getTitle());
+        noteFromMap.setContent(note.getContent());
+    }
     public void deleteById(Long id){
         mapOfAllNotes.remove(id);
     }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 20px; /* Добавляет внутренние отступы */
+            box-sizing: border-box; /* Убедитесь, что padding не увеличивает размер контейнера */
+        }
+        .note-form {
+            width: 100%; /* Адаптируйте по вашему желанию */
+            max-width: 500px; /* Адаптируйте по вашему желанию */
+            border: 2px solid #dee2e6; /* Граница вокруг формы */
+            padding: 20px; /* Отступы внутри формы */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Небольшая тень для лучшей видимости */
+            border-radius: 5px; /* Скругленные углы для границы */
+        }
+        .text-center {
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+<h2 class="text-center">Add Note</h2>
+<div class="form-container">
+    <form th:action="@{/note/add}" method="post" class="note-form">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text"  class="form-control" name="title" id="title" placeholder="Title of your note" required>
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <input type="text" name="content" class="form-control" id="content" placeholder="Content of your note" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary" style="background-color: #FF0000;">Reset</button>
+    </form>
+</div>
+</body>
+</html>
