@@ -1,4 +1,4 @@
-package com.example.demo.service.controllers;
+package com.example.demo.controllers;
 
 
 import com.example.demo.entity.Note;

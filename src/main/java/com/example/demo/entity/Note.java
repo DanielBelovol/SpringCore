@@ -1,22 +1,27 @@
 package com.example.demo.entity;
 
+import jakarta.persistence.*;
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-public class Note {
-    private static final AtomicLong idCounter = new AtomicLong();
+@Entity
 
+public class Note {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
     String title;
+    @Column
     String content;
 
 
     public Note(){
-        id = idCounter.incrementAndGet();
     }
     public Note(String title, String content){
-        id = idCounter.incrementAndGet();
         this.title = title;
         this.content = content;
     }
