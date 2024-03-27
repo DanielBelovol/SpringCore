@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class NoteDeleteResponse {
+public class NoteDeleteAndUpdateResponse {
     private boolean success;
     private String error;
 }
