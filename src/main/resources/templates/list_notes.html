@@ -15,9 +15,42 @@
         .table, .table th, .table td, .table tr {
     border: 1px solid black;
 }
+        .sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%; /* Центрируем меню по вертикали */
+  transform: translateY(-50%);
+  width: 200px; /* Ширина меню */
+  background-color: #f9f9f9; /* Цвет фона */
+  border: 1px solid #ccc; /* Граница вокруг меню */
+  border-radius: 10px; /* Скругленные углы */
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #ccc; /* Разделительные линии между пунктами */
+}
+
+.sidebar a:last-child {
+  border-bottom: none; /* Убрать границу у последнего элемента */
+}
+
+.sidebar a:hover {
+  background-color: #ddd; /* Цвет фона при наведении */
+}
+
     </style>
 </head>
 <body>
+<div class="sidebar">
+    <a href="/">Главное Меню</a>
+    <a href="/account">Аккаунт</a>
+    <a href="/create-post">Создать Пост</a>
+</div>
+
 <h2 class="text-center">Notes</h2>
 <div>
     <table class="table">
