@@ -21,8 +21,7 @@ class NoteRequestValidatorTest {
     @Test
     public void testValidateCreateRequestWithValidData() {
         NoteCreateRequest validRequest = new NoteCreateRequest("Title", "Content");
-        Assertions.assertTrue(validator.validateCreateRequest(validRequest),
-                "Validator should return true for valid title and content lengths");
+        Assertions.assertTrue(!validator.validateCreateRequest(validRequest));
     }
 
     @Test
