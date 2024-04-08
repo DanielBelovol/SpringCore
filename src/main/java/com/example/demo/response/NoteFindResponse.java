@@ -11,4 +11,5 @@ public class NoteFindResponse {
     private Note note;
     private boolean success;
     private String error;
+
 }
