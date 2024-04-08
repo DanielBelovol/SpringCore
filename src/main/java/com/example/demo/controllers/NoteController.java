@@ -102,5 +102,4 @@ public class NoteController {
         }
         return new ResponseEntity<>(noteResponse, status);
     }
-
 }
